@@ -25,12 +25,13 @@ body {
     background-image: url(./images/bg-pattern-top-mobile.svg), url(./images/bg-pattern-bottom-mobile.svg);
     background-repeat: no-repeat;
     background-position: top left, bottom right;
-    background-size:auto;
+    overflow-y: visible;
+
 }
 
 .main-container {
     /* width: 23.4375rem; */
-    margin: 5rem auto 15px;
+    margin: 5rem auto .9375rem;
     display: flex;
     flex-direction: column;
 }
@@ -43,17 +44,18 @@ body {
 
 .description-title {
     color: var(--VeryDarkMagenta);
-    font-size: 1.875rem;
+    font-size: 2.25rem;
     font-weight: 700;
     line-height: 1.875rem;
     margin: 0 4rem 1.875rem 4rem;
 }
 
 .description-paragraph {
-    font-size: .875rem;
+    font-size: 1rem;
     font-weight: 500;
+    letter-spacing: .0437rem;
     line-height: 1.5625rem;
-    margin: 0 1.75rem;
+    margin: 0 1.375rem;
     color: var(--DarkGrayishMagenta);
 }
 
@@ -121,10 +123,12 @@ body {
 .user-name {
     font-weight: 700;
     grid-column: 2/3;
+    color: var(--verysoftpink);
 }
 
 .status {
     grid-column: 2/3;
+    color: var(--SoftPink);
 }
 
 .coment {
@@ -132,6 +136,7 @@ body {
     grid-column: 1/3;
     line-height: 1.25rem;
     margin-top: 1.875rem;
+    color: var(--verysoftpink);
 }
 
 
@@ -149,7 +154,7 @@ body {
     color: hsl(228, 45%, 44%);
 }
 
-/*-------------Responsive Design (tablet)----------- */
+/*-------------Responsive Design (376px-tablet)----------- */
 
 @media (min-width: 23.5rem) {
     body {
@@ -238,3 +243,58 @@ body {
     }
 }
 
+/*-------------Responsive Design (1160px)--------------- */
+
+@media (min-width:72.5rem) {
+    body {
+        background-size: 36.25rem;
+        overflow-y: hidden;
+    }
+
+    .main-container {
+        margin: 7.8125rem aito;
+        max-width: 69.375rem;
+    }
+
+    .card-container {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        height: 20rem;
+        justify-content: space-between;
+        margin: 0;
+    }
+
+    .card {
+        margin: 0;
+    }
+}
+
+/*-----------Responsive Design (1440px-Desktop)---------- */
+
+@media (min-width:90rem) {
+    body {
+        overflow-y: hidden;
+    }
+    .description-container {
+        max-width: 26.875rem;
+        margin: 0;
+        padding: 0 1.25rem;
+        text-align: left;
+    }
+
+    .description-title {
+        font-size: 2.8125rem;
+        margin: 0;
+        line-height: 2.8125rem;
+    }
+
+    .description-paragraph {
+        margin: .9375rem 0 1.875rem;
+    }
+
+    .rating-container {
+        padding: 0;
+        grid-column: 7/-1;
+    }
+}
